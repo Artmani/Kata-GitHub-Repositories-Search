@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         try {
-            const response = await fetch(`https://api.github.com/search/repositories?q=${query}&per_page=10`);
+            const response = await fetch(`https://api.github.com/search/repositories?q=${query}&per_page=5`);
             if (response.ok) {
                 const data = await response.json();
                 displayAutocomplete(data.items);
